@@ -1,3 +1,11 @@
+/*
+i18n(国际化， 全名：internationalization)
+
+不改代码的情况下，能根据不同语言及地区显示相应的界面
+
+*/
+
+
 /**
  * @preserve jed.js https://github.com/SlexAxton/Jed
  */
@@ -1057,7 +1065,6 @@ var translateTool = (()=>{
     //设置语言包  end
 
     return {
-
         translate: (input)=>{
             if(!translatorCase){
                 console.error('请先设置语言包')

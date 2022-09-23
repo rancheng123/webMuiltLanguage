@@ -34,8 +34,6 @@ router.get('/requestLanguagePack.js', async (ctx) => {
 
 
 router.get('/api/description', async (ctx) => {
-
-
     ctx.body = `你好， 这是后端返回的数据`;
 })
 

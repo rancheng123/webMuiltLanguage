@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+
+
+
+</head>
+<body>
+    <span id="hello" style="display: inline-block;width: 200px;">
+
+    </span>
+    ， 小明
+
+
+    <style>
+        .switchLanguage{
+            margin-top: 20px;
+        }
+        #zh{
+            color: red;
+        }
+        #fr{
+            color: green;
+        }
+    </style>
+    <div class="switchLanguage">
+        切换语言
+        <span id="zh">
+            中文
+        </span>
+
+        <span id="fr">
+            法文
+        </span>
+    </div>
+</body>
+
+
+<!-- 请求语言包  start  （ 需要后端实现jsonp） -->
+<!--<script src="http://localhost:8377/requestLanguagePack?languageType=fr"></script>-->
+<script>
+    function getCookie(name)
+    {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg))
+            return unescape(arr[2]);
+        else
+            //默认返回中文
+            return 'zh';
+    }
+    document.write(`<script src="http://localhost:8377/requestLanguagePack.js?languageType=${getCookie('lan')}"><\/script>`)
+</script>
+<!-- 请求语言包  end -->
+
+
+<!-- 引入翻译器  start -->
+<script src="translator.js"></script>
+<!-- 引入翻译器  end -->
+
+<script>
+
+    window.onload = ()=>{
+
+        //翻译 start
+        var res = translateTool.translate('hello')
+        //翻译 end
+
+        document.getElementById('hello').innerText = res
+
+
+        document.getElementById('zh').onclick = ()=>{
+            //切换语言  start
+            translateTool.switchLanguage('zh')
+            //切换语言  end
+        }
+        document.getElementById('fr').onclick = ()=>{
+            //切换语言  start
+            translateTool.switchLanguage('fr')
+            //切换语言  end
+        }
+
+
+    }
+</script>
+</html>

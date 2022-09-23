@@ -1,0 +1,13 @@
+{
+  "domain": "scrm",
+  "locale_data": {
+    "scrm": {
+      "": {
+        "domain": "scrm",
+        "plural_forms": "nplurals=1; plural=0",
+        "lang": "zh"
+      },
+      "hello": ["你好"]
+    }
+  }
+}

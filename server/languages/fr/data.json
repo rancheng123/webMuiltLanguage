@@ -1,0 +1,13 @@
+{
+  "domain": "scrm",
+  "locale_data": {
+    "scrm": {
+      "": {
+        "domain": "scrm",
+        "plural_forms": "nplurals=2; plural=(n > 1)",
+        "lang": "fr"
+      },
+      "hello": ["bonjour"]
+    }
+  }
+}
